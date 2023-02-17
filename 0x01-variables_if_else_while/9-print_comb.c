@@ -1,22 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of single-digit numbers.
+ * main - Prints the alphabet in lowercase, except for q and e.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int num;
+	char letter;
 
-	for (num = 0; num <= 9; num++)
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar((num % 10) + '0');
-		if (num == 9)
-			continue;
-		
-		putchar(',');
-		putchar(' ');
+		if (letter != 'e' && letter != 'q')
+			putchar(letter);
 	}
 
 	putchar('\n');
